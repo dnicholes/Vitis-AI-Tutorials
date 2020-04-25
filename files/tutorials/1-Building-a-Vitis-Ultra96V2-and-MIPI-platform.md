@@ -48,11 +48,10 @@ Similar to how you designated the interfaces for the platform, you now must indi
  1. Double-click the **clk_wiz_0 IP**, and make the following changes in the Output Clocks tab:
    `[clk_out3=150MHz], [clk_out4=300MHz], [Matched routing selected on clk_out3/4], [Reset Type = Active Low]`
  1. Right-click the block design, select **Add IP**, and add a processor system reset IP for each of the new clocks.
- 1. Name the new clocks, `proc_sys_reset_dynamic_1` and `proc_sys_reset_dynamic_2`.
+ 1. Name the new processor system reset blocks: `proc_sys_reset_dynamic_1` and `proc_sys_reset_dynamic_2`.
  1. Connect the `clk_out3` and `clk_out4` outputs of `clk_wiz_0` block to `proc_sys_reset_dynamic_1` and `proc_sys_reset_dynamic_2` `slowest_sync_clk` inputs, respectively.
- 1. Connect the `ext_reset_in` to `pl_resetn0` on the MPSoC block.
- 1. Connect the "locked" output of the Clock Wizard to the `dcm_locked` port of the processor reset blocks.
- 1. Connect the `ext_reset_in` port of `each proc_sys_reset` block to the `pl_resetn0` port.
+ 1. Connect the `ext_reset_in` of each of the processor reset blocks to `pl_resetn0` on the MPSoC block.
+ 1. Connect the `locked` output of the Clock Wizard to the `dcm_locked` port of the processor reset blocks.
  1. In the Platform Interfaces tab, enable `clk_out3` and `clk_out4` of the `clk_wiz_0` instance.
  1. Set the slower clock (in this case, `clk_out3`) as the default. `clk_out3` should have its id set to 0, and `clk_out4` should have its id set to 1.
  1. Make sure the `proc_sys_reset` block listed in each window is set to the instance that is connected to that clock. Check the properties/options window when each clock is selected in platform interfaces, and verify the proc_sys_reset parameter matches.
