@@ -207,7 +207,7 @@ The DPUv2 IP is provided in the sources in the Vitis AI 1.0 Github. You need to 
 1. Click **binary_container_1** to change the name to dpu.
 1. Right-click **dpu** and select **Edit V++ options**.
 1. Add `--config ../src/prj_config` to designate which port of the DPU will connect to your Platform Interfaces you created earlier.
-1. In the Explorer tab, right-click the project folder, and in **GCC Host Linker** > **Libraries**, click the green **+** to add the following libraries:\
+1. In the Explorer tab, right-click the project folder, and in **C/C++ Build Settings** > **GCC Host Linker** > **Libraries**, click the green **+** to add the following libraries:\
         * opencv_core\
         * opencv_imgcodecs\
         * opencv_highgui\
@@ -215,7 +215,7 @@ The DPUv2 IP is provided in the sources in the Vitis AI 1.0 Github. You need to 
         * opencv_videoio\
 1. In the GCC Host Compiler sub-menu, select **Includes**, and click the red **X** icon to remove the XILINX_VIVADO_HLS entry.
 1. Click **Apply and Close**.
-1. In the Assistant tab, right-click **Hardware**, and click **Build to kick off a build of the Hardware and Software Components**.
+1. In the Assistant tab, right-click **Hardware**, and click **Build** to kick off a build of the Hardware and Software Components.
 
 ### Run the Demo
 
