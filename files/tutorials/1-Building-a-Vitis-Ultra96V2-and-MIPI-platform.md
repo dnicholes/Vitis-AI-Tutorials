@@ -64,7 +64,7 @@ The default scheduling mode for the acceleration kernels is polled. To enable in
 1. Right-click the block design, select **Add IP**, and add an AXI Interrupt controller.
 1. In the block properties for the interrupt controller, set the name to `axi_intc_0`.
 1. Double-click the controller block to customize it.
-1. Change the Auto/Manual switch to manual for "Edge or Level" and to "Single" for Interrupt Output Connection.
+1. Change the Auto/Manual switch to manual for "Interrupts type - Edge or Level" and to "Single" for "Interrupt Output Connection".
 1. Select OK to exit.
 1. Add a "Concat" IP to concatenate inputs into the interrupt controller.
 1. In the block properties for the concat block, set the name to xlconcat_interrupt_0.
