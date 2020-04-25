@@ -31,6 +31,7 @@ Now, you will make the necessary additions and modifications to the hardware des
 In order for the Vitis tool to insert your hardware acceleration blocks into the design, you need to leave open and designate the interfaces that it can use to connect the blocks. In this design, you need a few memory mapped interfaces, so that your kernels can connect into the PS DDR. You will open three HP Slave ports in this platform. This portion of the process also allows you to "name" the port, giving it a shorter nickname to designate connections later on.
 
 1. Open the base Vivado project.
+1. Click **Open Block Design**
 1. In the **Window** menu, click **Platform Interfaces**.
 1. To add the three PS HPx slaves that are not already being used, right-click the interface and select **Enable** on the following:
    * S_AXI_HP0_FPD
